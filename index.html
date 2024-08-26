@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Pessoal</title>
+    <style>
+        /* Estilo básico para o site */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        /* Estilo específico para a seção de Sobre Mim */
+        #sobre {
+            background-color: #e0f7fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        #sobre h1 {
+            color: #00796b;
+        }
+
+        /* Estilo específico para a seção de Formação */
+        #formacao {
+            background-color: #e8f5e9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        #formacao h1 {
+            color: #388e3c;
+        }
+
+        /* Estilo específico para a seção de Portfólio */
+        #portfolio {
+            background-color: #fce4ec;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        #portfolio h1 {
+            color: #d81b60;
+        }
+
+        #portfolio ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #portfolio ul li {
+            margin-bottom: 10px;
+        }
+
+        #portfolio ul li a {
+            color: #d81b60;
+            text-decoration: none;
+        }
+
+        #portfolio ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilo específico para a seção de Contato */
+        #contato {
+            background-color: #f3e5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        #contato h1 {
+            color: #ab47bc;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        form input[type="submit"] {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                <li><a href="#sobre" onclick="showSection('sobre')">Sobre Mim</a></li>
+                <li><a href="#formacao" onclick="showSection('formacao')">Formação</a></li>
+                <li><a href="#portfolio" onclick="showSection('portfolio')">Portfólio</a></li>
+                <li><a href="#contato" onclick="showSection('contato')">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Seção Home -->
+        <div id="home" class="section active">
+            <h1>Bem-vindo ao meu Portfólio!</h1>
+            <p>Este é um site de exemplo para mostrar minhas habilidades e projetos.</p>
+        </div>
+
+        <!-- Seção Sobre Mim -->
+        <div id="sobre" class="section">
+            <h1>Sobre Mim</h1>
+            <p>Olá, meu nome é [Seu Nome]. Eu sou apaixonado por [seus hobbies]. Gosto de [detalhes sobre você].</p>
+        </div>
+
+        <!-- Seção Formação -->
+        <div id="formacao" class="section">
+            <h1>Minha Formação</h1>
+            <p>Sou formado em [Sua Formação] pela [Instituição]. Tenho conhecimento em [idiomas e outras habilidades].</p>
+        </div>
+
+        <!-- Seção Portfólio -->
+        <div id="portfolio" class="section">
+            <h1>Meu Portfólio</h1>
+            <p>Aqui estão alguns dos meus projetos:</p>
+            <ul>
+                <li><a href="https://link-para-seu-trabalho1.com" target="_blank">Projeto 1</a></li>
+                <li><a href="https://link-para-seu-trabalho2.com" target="_blank">Projeto 2</a></li>
+                
+                <!-- Adicione mais projetos aqui -->
+            </ul>
+        </div>
+
+        <!-- Seção Contato -->
+        <div id="contato" class="section">
+            <h1>Contato</h1>
+            <form action="mailto:seuemail@exemplo.com" method="post" enctype="text/plain">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="message">Mensagem:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Meu Portfólio</p>
+    </footer>
+    <script>
+        // Função para mostrar a seção selecionada
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
