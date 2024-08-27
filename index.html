@@ -7,10 +7,11 @@
     <style>
         /* Estilo básico para o site */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #333;
         }
 
         header {
@@ -35,6 +36,7 @@
             color: white;
             text-decoration: none;
             padding: 5px 10px;
+            font-weight: bold;
         }
 
         nav ul li a:hover {
@@ -44,6 +46,7 @@
 
         main {
             padding: 20px;
+            text-align: center;
         }
 
         footer {
@@ -67,13 +70,26 @@
         /* Estilo específico para a seção de Sobre Mim */
         #sobre {
             background-color: #e0f7fa;
-            padding: auto;
+            padding: 20px;
             border-radius: 8px;
-            margin-bottom: auto;
+            margin-bottom: 20px;
         }
 
         #sobre h1 {
             color: #00796b;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        #sobre p {
+            font-size: 18px;
+        }
+
+        #sobre img {
+            border-radius: 50%;
+            margin-top: 15px;
+            max-width: 150px;
+            max-height: 150px;
         }
 
         /* Estilo específico para a seção de Formação */
@@ -86,6 +102,19 @@
 
         #formacao h1 {
             color: #388e3c;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        #formacao ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 18px;
+        }
+
+        #formacao ul li {
+            margin-bottom: 10px;
+            text-align: left;
         }
 
         /* Estilo específico para a seção de Portfólio */
@@ -98,20 +127,25 @@
 
         #portfolio h1 {
             color: #d81b60;
+            font-size: 24px;
+            font-weight: bold;
         }
 
         #portfolio ul {
             list-style-type: none;
             padding: 0;
+            font-size: 18px;
         }
 
         #portfolio ul li {
             margin-bottom: 10px;
+            text-align: left;
         }
 
         #portfolio ul li a {
             color: #d81b60;
             text-decoration: none;
+            font-weight: bold;
         }
 
         #portfolio ul li a:hover {
@@ -128,37 +162,21 @@
 
         #contato h1 {
             color: #ab47bc;
+            font-size: 24px;
+            font-weight: bold;
         }
 
-        form {
-            max-width: 600px;
-            margin: auto;
+        #contato h2 {
+            font-size: 18px;
         }
 
-        form label {
-            display: block;
-            margin: 10px 0 5px;
+        #contato a {
+            color: #ab47bc;
+            text-decoration: none;
         }
 
-        form input, form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-        }
-
-        form input[type="submit"] {
-            background-color: #333;
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-
-        form input[type="submit"]:hover {
-            background-color: #555;
+        #contato a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -176,17 +194,22 @@
     <main>
 
         <!-- Seção Sobre Mim -->
-        <div id="sobre" class="section">
+        <div id="sobre" class="section active">
             <h1>Sobre Mim</h1>
-            <p>Meu nome é João, tenho 27 anos e sou apaixonado por minha família. Sou casado com a Luana, e juntos cuidamos dos nossos dois filhos caninos, Susuky e Chico, que alegram nosso dia a dia. 
-                Além de estar sempre conectado ao trabalho com a internet, algo que me fascina, também sou dedicado à minha saúde e bem-estar, frequentando regularmente a academia.</p></p>
+            <p>Meu nome é João, tenho 27 anos e sou apaixonado por minha família. Sou casado com a Luana, e juntos cuidamos dos nossos dois filhos caninos, Susuky e Chico, que alegram nosso dia a dia.</p>
+            <p>Além de estar sempre conectado ao trabalho com a internet, algo que me fascina, também sou dedicado à minha saúde e bem-estar, frequentando regularmente a academia.</p>
+            <!-- Espaço para colocar a foto -->
+            <img src="sua-foto-aqui.jpg" alt="Minha Foto">
         </div>
 
         <!-- Seção Formação -->
         <div id="formacao" class="section">
             <h1>Minha Formação</h1>
-            <p>Atualmento Estou fazendo faculdade de Analise e Desenvolvimento de Sistemas. Estou fazendo um curso de C# pela Udemu sobre Programação a objeto e também 
-            Curso de progrmação web. </p>
+            <ul>
+                <li>- Cursando Análise e Desenvolvimento de Sistemas</li>
+                <li>- Curso de C# pela Udemy</li>
+                <li>- Curso de Programação Web</li>
+            </ul>
         </div>
 
         <!-- Seção Portfólio -->
@@ -194,20 +217,20 @@
             <h1>Meu Portfólio</h1>
             <p>Aqui estão alguns dos meus projetos:</p>
             <ul>
-                <li><a href="https://github.com/JoaoGbotta/Calculo-Churrasco" target="_blank">Projeto 1 - Churrascometro </a></li>
-                <p> Esse projeto calcula a quantidade de comida e bebidas para adultos e crianças. Baseado no tempo de Duração. </p>
-                <li><a href="https://github.com/JoaoGbotta/Jogo-da-Velha-" target="_blank">Projeto 2</a></li>
-                <p> Projeto 2 - jogo da velha. Falta alguns detalhes. </p>
+                <li><a href="https://github.com/JoaoGbotta/Calculo-Churrasco" target="_blank">Projeto 1 - Churrascômetro</a></li>
+                <p>Esse projeto calcula a quantidade de comida e bebidas para adultos e crianças, baseado no tempo de duração.</p>
+                <li><a href="https://github.com/JoaoGbotta/Jogo-da-Velha-" target="_blank">Projeto 2 - Jogo da Velha</a></li>
+                <p>Falta alguns detalhes.</p>
             </ul>
         </div>
 
         <!-- Seção Contato -->
         <div id="contato" class="section">
             <h1>Contato</h1>
-                <h2>
-                <P>E-mail:vitorbotta12@gmai.com</P></br>
-                <P>Telefone: (12) 992402939</P></br>
-                </h2>
+            <h2>
+                <p>E-mail: <a href="mailto:vitorbotta12@gmail.com">vitorbotta12@gmail.com</a></p>
+                <p>Telefone: (12) 99240-2939</p>
+            </h2>
         </div>
     </main>
     <footer>
