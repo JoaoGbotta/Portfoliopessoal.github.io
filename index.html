@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Pessoal</title>
+    <style>
+        /* Estilo básico para o site */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: auto;
+            background-color: #f4f4f4;
+            color: #333;
+            
+
+        }
+
+        header {
+            background-color: #3a3939;
+            color: rgb(66, 60, 60);
+            padding: 1rem;
+            border-radius: 12px;
+        }
+            
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: rgb(252, 252, 252);
+            text-decoration: none;
+            padding: 5px 10px;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            background-color: #999898;
+            border-radius: 5px;
+        }
+            
+
+        main {
+            
+            text-align: center;
+            padding: auto;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #bebdb8;
+           
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            
+            
+        }
+        .section {
+            display: none;
+            
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        /* Estilo específico para a seção de Sobre Mim */
+        #sobre {
+            
+            background-color: #bebdb8;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: auto;
+            height: 100%;
+            
+            
+
+            
+        }
+
+        #sobre h1 {
+            color: #000000;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        #sobre p {
+            font-size: 25px;
+            color: black;
+            
+        }
+
+        #sobre img {
+            border-radius: 10%;
+            margin-top: 10px;
+            max-width: 30%;
+            max-height: 30%;
+        }
+
+        /* Estilo específico para a seção de Formação */
+        #formacao {
+            background-color: #bebdb8;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: auto;
+            height: auto;
+            
+
+            
+        }
+
+        #formacao h1 {
+            color: #000000;
+            font-size: 25px;
+            font-weight: bold;
+            padding: 4px;
+            
+
+        }
+
+        #formacao ul {
+            list-style-type: none;
+            padding: 5px;
+            font-size: 23px;
+            margin-bottom: auto;
+            flex-direction: column-reverse;
+            width: auto;
+        }
+
+
+        /* Estilo específico para a seção de Portfólio */
+        #portfolio {
+            background-color: #bebdb8;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: auto;
+            flex-direction: column-reverse;
+            width: auto;
+        }
+
+        #portfolio h1 {
+            color: #000000;
+            font-size: 30px;
+            font-weight: bold;
+            padding: auto;
+            
+        }
+
+        #portfolio ul {
+            list-style-type: none;
+            padding: 70px;
+            font-size: 25px;
+            margin-bottom: 10px;
+            text-align: auto;
+        }
+        
+
+        #portfolio ul li a {
+            color: #1b28d8;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #portfolio ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilo específico para a seção de Contato */
+        #contato {
+            background-color: #bebdb8;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: auto;
+            flex-direction: column-reverse;
+            width: auto;
+            height:100%;
+        }
+
+        #contato h1 {
+            padding: auto;
+            color: #000000;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        #contato h2 {
+            font-size: 25px;
+            padding: 20px;
+        }
+
+        #contato a {
+            color: #1b28d8;
+            text-decoration: none;
+        }
+
+        #contato a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#sobre" onclick="showSection('sobre')">Sobre Mim</a></li>
+                <li><a href="#formacao" onclick="showSection('formacao')">Formação</a></li>
+                <li><a href="#portfolio" onclick="showSection('portfolio')">Portfólio</a></li>
+                <li><a href="#contato" onclick="showSection('contato')">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <!-- Seção Sobre Mim -->
+        <div id="sobre" class="section active">
+            <h1>Sobre Mim</h1>
+            <p>Meu nome é João, tenho 27 anos e sou apaixonado por minha família. Sou casado com a Luana, e juntos cuidamos dos nossos dois filhos caninos, Susuky e Chico, que alegram nosso dia a dia.</p>
+            <p>Além de estar sempre conectado ao trabalho com a internet, algo que me fascina, também sou dedicado à minha saúde e bem-estar, frequentando regularmente a academia.</p>
+            <!-- Espaço para colocar a foto -->
+            <img src="./foto/Joao e luana.jpeg" alt="Minha Foto">
+        </div>
+
+        <!-- Seção Formação -->
+        <div id="formacao" class="section">
+            <h1>Formação</h1>
+            <ul>
+                <li>- Cursando Análise e Desenvolvimento de Sistemas</li>
+                <li>- Curso de C# pela Udemy</li>
+                <li>- Curso de Programação Web</li>
+                <h1>Resumo</h1>
+                <P>Profissional dedicado e entusiasta da tecnologia, com experiência significativa no ambiente digital e desenvolvimento web. 
+                    Com formação em Análise e Desenvolvimento de Sistemas e diversos cursos voltados para programação, incluindo especializações em C# e desenvolvimento web, possuo um conhecimento sólido em linguagens e ferramentas essenciais para criação e manutenção de sistemas robustos. 
+                    Minha trajetória é marcada por um comprometimento com a evolução contínua, seja no desenvolvimento de projetos pessoais, como jogos e calculadoras web, ou no constante aprimoramento de habilidades técnicas através de cursos online. Além disso, minha rotina inclui práticas que equilibram vida pessoal e profissional, mantendo o foco na saúde e no bem-estar, o que reflete diretamente na qualidade e eficiência do meu trabalho. </P>
+                    <li><a href="https://programadorbr.com/" target="_blank">Curso Pogramação Web</a></li>
+                    <li><a href="https://www.udemy.com/course/programacao-orientada-a-objetos-csharp/" target="_blank">Curso programacao orientada a objetos</a></li>
+
+                </ul>
+                 
+
+        </div>
+
+        <!-- Seção Portfólio -->
+        <div id="portfolio" class="section">
+            <h1>Portfólio</h1>
+            <ul>
+                <li><a href="https://github.com/JoaoGbotta/Calculo-Churrasco" target="_blank">Projeto 1 - Churrascômetro</a></li>
+                <p>Projeto Feito para calcular a quantidade de comida e bebida, baseado na duração do evento. Nesse projeto foi usado
+                    Html, Css e JavaScrit. 
+                </p>
+                <li><a href="https://github.com/JoaoGbotta/Jogo-da-Velha-" target="_blank">Projeto 2 - Jogo da Velha</a></li>
+                <p>Jogo da velha. Nesse projeto foi usado. Html, Css e JavaScrit</p>
+            </ul>
+        </div>
+
+        <!-- Seção Contato -->
+        <div id="contato" class="section">
+            <h1>Contato</h1>
+                <p>E-mail: <a href="mailto:vitorbotta12@gmail.com">vitorbotta12@gmail.com</a></p>
+                 Telefone: (12) 99240-2939
+                <h2>Deixe seu comentário</h2>
+                <form id="comentarioForm">
+                    <label for="comentario"></label><br>
+                    <textarea id="comentario" name="comentario" rows="4" cols="50" required></textarea><br><br>
+                    <button type="submit">Enviar</button>
+                    <h2>Comentário</h2>
+                    <div id="comentarios">
+                        <!-- Comentários serão adicionados aqui -->
+                    </div>
+                    <script>
+                        document.getElementById('comentarioForm').addEventListener('submit', function(event) {
+                            event.preventDefault(); // Impede o envio do formulário tradicional
+                
+                            // Obtém o valor do comentário
+                            var comentario = document.getElementById('comentario').value;
+                
+                            // Cria um novo elemento para o comentário
+                            var comentarioDiv = document.createElement('div');
+                            comentarioDiv.className = 'comentario';
+                            comentarioDiv.textContent = comentario;
+                
+                            // Adiciona o comentário ao container de comentários
+                            document.getElementById('comentarios').appendChild(comentarioDiv);
+                
+                            // Limpa o campo de texto
+                            document.getElementById('comentario').value = '';
+                        });
+                    </script>
+                </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Meu Portfólio</p>
+    </footer>
+    <script>
+        // Função para mostrar a seção selecionada
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
